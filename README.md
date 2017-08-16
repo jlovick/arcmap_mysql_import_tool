@@ -87,3 +87,9 @@ Finally if you are unhappy about the field conversion type choosen, you can chan
 To import the table, load the import tool, and choose the appropriate configuration file. Then choose a file name with Geodatabase to hold the new dataset. The tool will automaticially choose an appropriate file extension.
 
 When a configuration file is loaded it will display a list of the table fields, this is for information purposes only, and is taken from the database so indicats a suitable database conection can be made.
+
+## Caveats
+
+- Your database password is not protected in any way, you should therefore remove any configuration files after use if security is a concern.
+- Currently you must import into an existing geodatabase, rather than being able to place your files anywhere.
+- There must be bugs, i havent had long enough to iron out all the critters, though none are known of at this point. 
