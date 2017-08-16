@@ -29,15 +29,57 @@ Copy the Mysql_importer into a suitble location, or get it out from github and p
 
 load up ArcMap, and confirm that you can find the toolbox in your file system.
 
+## Usage
+### Configuration creation
 ![Image of Configuration writer](https://s3-us-west-2.amazonaws.com/jlovick-gis/mysql_importer/config_window.jpg)
 
-Upon populating the mysql password field, the tool will connect to the database and download a list of tables, and will choose the first to further list the fields of that table.
-
-## Usage
+Upon populating the mysql password field, the tool will connect to the database and download a list of tables, and will choose the first to further list the fields of that table. Mysql views, are treated as tables and can be used in the same manor.
 
 ![Image of list of Table](https://s3-us-west-2.amazonaws.com/jlovick-gis/mysql_importer/config-2.jpg)
 
 you can change the table to import by replacing the Mysql table to convert text.
 
 Most of the tools use Latitude Longitude coordinates in line with a WGS 1984 spatial reference system, coded as 4326, if however your data is in an alternate system you can change the code ( http://spatialreference.org/ ) is a good source for alternate projection codes.
+
+**Neither** the tables *availible* list or the *columns to be imported* list currently allow user interaction and are included for reference puropses only.
+
+When you are satisfied you have the correct table, and coordinate system, choose a file to save the configuration to, by default no file extension is selected, however as this file is in YAML format, **.yml** is not a bad choice.
+
+```
+---
+database: ant
+fields:
+- from: int(10) unsigned
+  geometry: false
+  import: true
+  name: id
+  to: LONG
+- from: double
+  geometry: false
+  import: true
+  name: Lat
+  to: DOUBLE
+- from: double
+  geometry: false
+  import: true
+  name: Long
+  to: DOUBLE
+file_has_geometry: true
+host: orca.anatexis.net
+password: my_not_secret_password
+referencesystem: '4326'
+port: '3306'
+table: spatial_point_lat_long
+user: jlovick
+---
+```
+The congfiguration file will need to be edited if you wish to exclude a column.
+```
+import: false
+```
+or if you have multiple geometry columns, you will need to pick one.
+Finally if you are unhappy about the field conversion type choosen, you can change it 
+
+### Importing a table
+
 
