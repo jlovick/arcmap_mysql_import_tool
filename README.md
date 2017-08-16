@@ -18,9 +18,14 @@ pip install PyYAML
 ```
 You also need a mysql database that is accessible via the network , (no local sockets) to enable such a setup perhaps use http://sogoth.com/?p=99 though windows users may need to hunt to find their copy of my.cnf
 
+You will need ArcMap version 10.1 or greater.
+
 to use the tool you will need to know
 
-*host*,*username*,*password*,*database namne*
+*host*,*username*,*password*,*database namne*,*a geospatial database to import into*
 
 ## Installation
-Copy the Mysql_importer
+Copy the Mysql_importer into a suitble location, or get it out from github and place it directly where you want it, https://github.com/jlovick/arcmap_mysql_import_tool/archive/master.zip 
+
+load up ArcMap, and confirm that you can find the toolbox in your file system.
+
