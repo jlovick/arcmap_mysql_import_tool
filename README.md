@@ -82,4 +82,8 @@ Finally if you are unhappy about the field conversion type choosen, you can chan
 
 ### Importing a table
 
+![The import tool](https://s3-us-west-2.amazonaws.com/jlovick-gis/mysql_importer/import.jpg)
 
+To import the table, load the import tool, and choose the appropriate configuration file. Then choose a file name with Geodatabase to hold the new dataset. The tool will automaticially choose an appropriate file extension.
+
+When a configuration file is loaded it will display a list of the table fields, this is for information purposes only, and is taken from the database so indicats a suitable database conection can be made.
