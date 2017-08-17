@@ -22,7 +22,7 @@ You will need ArcMap version 10.1 or greater.
 
 to use the tool you will need to know
 
-*host*,*username*,*password*,*database namne*,*a geospatial database to import into*
+*host*,*username*,*password*,*database name*,*a geospatial database to import into*
 
 ## Installation
 Copy the Mysql_importer into a suitble location, or get it out from github and place it directly where you want it, https://github.com/jlovick/arcmap_mysql_import_tool/archive/master.zip 
@@ -73,7 +73,7 @@ table: spatial_point_lat_long
 user: jlovick
 ---
 ```
-The congfiguration file will need to be edited if you wish to exclude a column.
+The configuration file will need to be edited if you wish to exclude a column.
 ```
 import: false
 ```
@@ -88,8 +88,9 @@ To import the table, load the import tool, and choose the appropriate configurat
 
 When a configuration file is loaded it will display a list of the table fields, this is for information purposes only, and is taken from the database so indicats a suitable database conection can be made.
 
-## Caveats
+##Caveats
 
 - Your database password is not protected in any way, you should therefore remove any configuration files after use if security is a concern.
 - Currently you must import into an existing geodatabase, rather than being able to place your files anywhere.
-- There must be bugs, i havent had long enough to iron out all the critters, though none are known of at this point. 
+- There must be bugs, i haven't had long enough to iron out all the critters, though none are known of at this point. 
+- A github page now hosts the project and i will maintain the scripts as long as i have need of a converter, please report issues on github, and also make improvement requests there.
